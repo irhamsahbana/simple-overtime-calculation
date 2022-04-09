@@ -86,9 +86,8 @@ class OvertimePaymentFinder extends AbstractFinder
                                 ])->get();
 
 
-        $overtimes = $this->query;
 
-        $employees = $employees->map(function ($employee) use ($overtimes, $permanent, $probation, $formula) {
+        $employees = $employees->map(function ($employee) use ($permanent, $probation, $formula) {
             $status = $employee->status_id;
 
             $overtimes = $employee->overtimes

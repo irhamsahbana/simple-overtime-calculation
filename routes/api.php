@@ -25,7 +25,7 @@ Route::patch('/settings',[ApiSettingController::class, 'update']);
 Route::get('/employees', [ApiEmployeeController::class, 'index']);
 Route::post('/employees', [ApiEmployeeController::class, 'store']);
 
+Route::get('/overtime-pays/calculate', [ApiOvertimeController::class, 'calculatePayment']);
 Route::get('/overtimes', [ApiOvertimeController::class, 'index']);
 Route::post('/overtimes', [ApiOvertimeController::class, 'store']);
-Route::get('/overtime-pays/calculate', [ApiOvertimeController::class, 'calculatePayment']);
 
